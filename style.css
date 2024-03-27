@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #0d0d0d;
+    box-sizing: border-box;
+}
+
+.hero {
+    text-align: center;
+    height: 65vh;
+    background-image: linear-gradient(to right bottom, #985eae, #88185f);
+    color: white;
+    padding-top: 50px;
+}
+
+.img {
+    width: 300;
+    height: 300;
+    left: 15%;
+    top: 6%;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.hobbies {
+    height: 170vh;
+    padding-top: 3vh;
+    padding-left: 4vh;
+}
+
+.hobbies ul {
+    
+    font-size: 1rem;
+    text-align: left;
+    margin: 40;
+}
+
+.hobbies li {
+    margin: 5rem;
+}
+
+
+#running {
+    float: left;
+    margin-right: 10px;
+    height: 200;
+}
+
+#valor {
+    float: left;
+    margin-right: 10px;
+    height: 280;
+}
+
+#podcastvideo {
+    float: left;
+}
+
+.contact {
+    text-align: center;
+    background-image: linear-gradient(to right bottom, #379fb6, #76ace9);
+    height: 400px;
+}
+
+.btn {
+    margin: 30;
+    color: rgb(44, 44, 44);
+    margin: 10;
+    text-decoration: none;
+    background-color: #e4e4e4;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn-endurance{
+    margin: 30;
+    color: rgb(245, 245, 245);
+    margin: 10;
+    text-decoration: none;
+    background-color: #3a6aca;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+.btn-contactme{
+    color: rgb(44, 44, 44);
+    margin: 10;
+    text-decoration: none;
+    background-color: #e4e4e4;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.aboutmetable {
+    margin-top: 50px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.passRun {
+    padding: 50px;
+}
