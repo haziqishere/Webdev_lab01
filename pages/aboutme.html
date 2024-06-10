@@ -1,54 +1,70 @@
-<!DOCTYPE = html>
-<html lang="eng">
-    <head>
-        <meta charset="UTF=8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Learning HTML & CSS is fun</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="/style/style.css">
-    </head>
-
-    <body>
-        <div class="hero">
-                <img class="img" src="../img/profilePic.png" alt="haziq"/>
-            <h1>Haziq Hakimi bin Mazlisham</h1>
-            <p>3rd Year Computer Science Student in Multimedia Computing</p>
-            <a class="btn" href="https://www.linkedin.com/in/haziqhakimimazlisham/">Follow My LinkedIn</a>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Haziq Hakimi bin Mazlisham</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="../index.html">Haziq Blog</a>
         </div>
-        
-        
-        <section>
-            <div class="aboutmetable">
-                <table border="1">
-                    <tr>
-                        <th>Name</th>
-                        <td>Haziq Hakimi bin Mazlisham</td>
-                    </tr>
-                    <tr>
-                        <th>Age</th>
-                        <td>22</td>                  
-                    </tr>
-                    <tr>
-                        <th>Education</th>
-                        <td>Bachelor Science Computer (Multimedia Computing)</td>                  
-                    </tr>
-                    <tr>
-                        <th>Hometown</th>
-                        <td>Kuantan, Pahang</td>                  
-                    </tr>
-                    <tr>
-                        <th>Interest</th>
-                        <td>Web development, Machine Learning and Data Analytics</td>                  
-                    </tr>
-                    <tr>
-                        <th>DOB</th>
-                        <td>4th December 2002</td>                  
-                    </tr>
-                </table>
-            </div> 
-        </section>
+        <ul class="navbar__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="navbar__dropdown">
+                <a href="#">Hobbies</a>
+                <ul class="navbar__dropdown-content">
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+        <div class="navbar__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    </body>
+    <section>
+        <div class="aboutmetable">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Haziq Hakimi bin Mazlisham</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>22</td>                  
+                </tr>
+                <tr>
+                    <th>Education</th>
+                    <td>Bachelor Science Computer (Multimedia Computing)</td>                  
+                </tr>
+                <tr>
+                    <th>Hometown</th>
+                    <td>Kuantan, Pahang</td>                  
+                </tr>
+                <tr>
+                    <th>Interest</th>
+                    <td>Web development, Machine Learning and Data Analytics</td>                  
+                </tr>
+                <tr>
+                    <th>DOB</th>
+                    <td>4th December 2002</td>                  
+                </tr>
+            </table>
+        </div> 
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

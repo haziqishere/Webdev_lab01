@@ -1,0 +1,50 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #0d0d0d;
+    background: linear-gradient(to right bottom, #985eae, #88185f);
+    margin: 0;
+    padding: 0;
+}
+
+.aboutmetable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+table {
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
