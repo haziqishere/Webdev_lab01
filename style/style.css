@@ -280,38 +280,109 @@ body {
     .row .col-3-of-4 {
       width: calc(3*((100% - 3 * 6rem)/4) + 2 * 6rem); }
 
-.section-features {
-  padding: 20rem 0;
-  background-size: cover;
-  background-image: linear-gradient(to right bottom, #d049df5b, #650048c8),url(/img/umhackathon.JPG);
-}
+      .section-features {
+        padding: 20rem 0;
+        background-size: cover;
+        background-image: linear-gradient(to right bottom, #d049df5b, #650048c8), url(/img/umhackathon.JPG);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .feature-box {
+        background-color: rgba(255, 255, 255, 0.409);
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s; 
+        margin-bottom: 2rem;
+        margin: 0 auto; /* Center the feature box horizontally */
+    }
+    
+    .feature-box h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .feature-box li {
+        margin: 0.5rem 0;
+    }
+    
+    .feature-box a {
+        margin-top: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #ca3aca;
+        padding: 0.7rem 2rem;
+        border-radius: 10rem;
+        font-size: 1rem;
+    }
+    
+    .feature-box__icon {
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, #b50b9e, #8515c2);
+        -webkit-background-clip: text;
+        color: transparent; 
+    }
+    
+    .feature-box:hover {
+        transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); 
+    }
+    
+    /*Responsie for feature boxes*/
+    @media (max-width: 768px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .row [class^="col-"] {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    
+        .feature-box {
+            width: 90%;
+            margin: 0 auto; /* Ensure the feature box is centered horizontally */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .feature-box {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+        }
+    
+        .feature-box__icon {
+            font-size: 4rem;
+        }
+    
+        .feature-box h1 {
+            font-size: 1.6rem;
+        }
+    
+        .feature-box a {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+    }
+    
 
-/*Feature Box*/
-.feature-box {
-  background-color: rgba(255, 255, 255, 0.409);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s; 
-}
-
-.feature-box__icon {
-  font-size: 6rem;
-  margin-bottom: 5px;
-  display: inline-block;
-  background-image: linear-gradient(to right, #b50b9e, #8515c2);
-  -webkit-background-clip: text;
-  color: transparent; 
-}
-
-.feature-box:hover {
-  transform: translateY(-1.5rem) scale(1.05);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); 
-}
-
-/* Responsive design */
+/* Responsive design for hero*/
 @media (max-width: 768px) {
     .hero {
         height: auto;
