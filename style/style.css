@@ -1,9 +1,134 @@
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #0d0d0d;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar__logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar__links li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.navbar__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+    color: #76ace9;
+}
+
+/* Dropdown Styles */
+.navbar__dropdown:hover .navbar__dropdown-content {
+    display: block;
+}
+
+.navbar__dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.navbar__dropdown-content li {
+    padding: 0.5rem 1rem;
+}
+
+.navbar__dropdown-content a {
+    color: #fff;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Toggle Button Styles */
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar__toggle span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar__links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .navbar__links.active {
+        height: auto;
+    }
+
+    .navbar__links li {
+        margin: 1rem 0;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
 }
 
 body {
@@ -26,76 +151,47 @@ body {
 
 .hero {
     text-align: center;
-    height: 65vh;
+    height: 90vh;
     background-image: linear-gradient(to right bottom, #985eae, #88185f);
     color: white;
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero h1, .hero h3, .hero p {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5vw; /* Responsive font size */
+}
+
+.hero h3 {
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+.hero p {
+    font-size: 1.2vw; /* Responsive font size */
 }
 
 .img {
-    width: 300;
-    height: 300;
-    left: 15%;
-    top: 6%;
+    width: 200px;
+    height: 200px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
-}
-
-.hobbies {
-    height: 170vh;
-    padding-top: 3vh;
-    padding-left: 4vh;
-}
-
-.hobbies ul {
-    
-    font-size: 1rem;
-    text-align: left;
-    margin: 40;
-}
-
-.hobbies li {
-    margin: 5rem;
-}
-
-
-#running {
-    float: left;
-    margin-right: 10px;
-    height: 200;
-}
-
-#valor {
-    float: left;
-    margin-right: 10px;
-    height: 280;
-}
-
-#podcastvideo {
-    float: left;
-}
-
-.contact {
-  text-align: center;
-  background-image: linear-gradient(to right bottom, #379fb6, #76ace9);
-  padding: 4rem 2rem;
-  color: white;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.contact p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .btn {
-    margin: 30;
+    margin: 10px;
     color: rgb(44, 44, 44);
-    margin: 10;
     text-decoration: none;
     background-color: #e4e4e4;
     padding: 0.7rem 2rem;
@@ -104,26 +200,45 @@ body {
     font-size: 1rem;
 }
 
-.btn-hobby{
-    margin: 30;
+.btn-hobby {
     color: rgb(245, 245, 245);
-    margin: 10;
-    text-decoration: none;
     background-color: #ca3aca;
     padding: 0.7rem 2rem;
     border-radius: 10rem;
     display: inline-block;
     font-size: 1rem;
 }
-.btn-contactme{
-    color: rgb(44, 44, 44);
-    margin: 10;
+
+.btn-contactme {
+    color: white;
     text-decoration: none;
-    background-color: #e4e4e4;
-    padding: 0.7rem 2rem;
+    background-color: #5a9bd3;
+    padding: 1rem 3rem;
     border-radius: 10rem;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.btn-contactme:hover {
+    background-color: #4682b4;
+}
+
+.contact {
+    text-align: center;
+    background-image: linear-gradient(to right bottom, #379fb6, #76ace9);
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
 }
 
 .aboutmetable {
@@ -136,8 +251,7 @@ body {
     padding: 50px;
 }
 
-
- /* Row setup */
+/* Row setup */
 .row {
     max-width: 114rem;
     margin: 0 auto; }
@@ -165,7 +279,6 @@ body {
       width: calc(2*((100% - 3 * 6rem)/4) + 6rem); }
     .row .col-3-of-4 {
       width: calc(3*((100% - 3 * 6rem)/4) + 2 * 6rem); }
-
 
 .section-features {
   padding: 20rem 0;
@@ -196,4 +309,37 @@ body {
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.05);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    .hero h1 {
+        font-size: 4vw;
+    }
+    .hero h3 {
+        font-size: 2.5vw;
+    }
+    .hero p {
+        font-size: 2vw;
+    }
+    .img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 5vw;
+    }
+    .hero h3 {
+        font-size: 3vw;
+    }
+    .hero p {
+        font-size: 2.5vw;
+    }
 }
